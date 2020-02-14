@@ -53,4 +53,8 @@ dotnet ef migrations add initial
 dotnet ef database update
 ~~~
 
+4. Add some showings
+
+The code does not add any showings to the database, these *must* be added manually into the database or the application will fail.
+
 The application should now be ready to run.
