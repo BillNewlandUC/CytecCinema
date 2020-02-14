@@ -1,0 +1,24 @@
+﻿@model CytecCinema.Models.ConfirmationViewModel
+
+<h1>Booking Confirmation</h1>
+
+<form>
+    <div>
+        <label asp-for="Booking.Showing.MovieName">Move Name</label>
+        <input asp-for="Booking.Showing.MovieName" readonly />
+    </div>
+    <div>
+        <label asp-for="Booking.Showing.ShowingAt">Showing At</label>
+        <input asp-for="Booking.Showing.ShowingAt" readonly />
+    </div>
+    <div>
+        <label asp-for="Booking.CustomerName">Customer Name</label>
+        <input asp-for="Booking.CustomerName" />
+    </div>
+    <div>
+        <label asp-for="Booking.TicketsBought">Tickets Purchased</label>
+        <input asp-for="Booking.TicketsBought" />
+    </div>
+</form>
+
+<a asp-action="index"asp-controller="Home">Make another booking</a>

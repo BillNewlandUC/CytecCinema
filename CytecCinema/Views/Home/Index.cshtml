@@ -1,0 +1,22 @@
+﻿@model CytecCinema.Models.BookingViewModel
+
+@{
+    ViewData["Title"] = "Cytec Cinema";
+}
+
+<h1>Book Tickets</h1>
+
+<form asp-controller="Home"  method="post">
+    <div>
+        <select asp-for="Booking.ShowingId" asp-items='new SelectList(Model.Showings,"Id","Performance")'></select>
+    </div>
+    <div>
+        <label asp-for="Booking.CustomerName">Customer Name</label>
+        <input asp-for="Booking.CustomerName" />
+    </div>
+    <div>
+        <label asp-for="Booking.TicketsBought">Tickets</label>
+        <input asp-for="Booking.TicketsBought" />
+    </div>
+    <input type="submit" title="Book" />
+</form>

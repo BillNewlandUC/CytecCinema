@@ -1,0 +1,12 @@
+﻿@model CytecCinema.Models.BookingFailViewModel
+
+@{
+    ViewData["Title"] = "Cytec Cinema";
+}
+
+<h1>Booking Unsuccessful</h1>
+
+<form>
+    <p>The performance of @( Model.Performance ) does nt have enough tickets, you ordered @( Model.TicketsBought ) tickets and only @( Model.TicketsAvailable ) are available.</p>
+    <a asp-action="index" asp-controller="Home">Make another booking</a>
+</form>
